@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { getIRRate, calcInvestment, buildChartData } from '../lib/investment-utils'
-import { InvestmentType } from '../types/investment'
+import type { InvestmentType } from '../types/investment'
 
 describe('investment-utils', () => {
   describe('getIRRate', () => {

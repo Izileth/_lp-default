@@ -461,7 +461,7 @@ export default function InvestmentSimulator() {
       {/* footer */}
       <footer className="border-t border-gray-200 bg-white mt-4">
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <span className="text-xl font-black text-gray-900" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>InvestSim</span>
+          <span className="text-xl font-black text-gray-900" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>Invest</span>
           <p className="text-xs text-gray-400 text-center">
             Simulações com fins educativos. Não constitui recomendação de investimento. CDI: {CDI}% a.a. © {new Date().getFullYear()}
           </p>
