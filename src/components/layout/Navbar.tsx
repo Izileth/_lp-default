@@ -1,4 +1,9 @@
-export function Navbar() {
+interface NavbarProps {
+  currentPage: string;
+  onPageChange: (page: string) => void;
+}
+
+export function Navbar({ currentPage, onPageChange }: NavbarProps) {
   const links = ["Simuladores", "Investimentos", "Finanças", "Economia", "Tecnologia", "Carreira"];
   return (
     <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
@@ -7,7 +12,11 @@ export function Navbar() {
           <div className="text-xs text-gray-400 font-medium hidden sm:block">
             {new Date().toLocaleDateString("pt-BR", { weekday: "long", day: "numeric", month: "long", year: "numeric" })}
           </div>
-          <div style={{ fontFamily: "'Playfair Display',Georgia,serif" }} className="text-3xl font-black tracking-tight text-gray-900 select-none">
+          <div 
+            style={{ fontFamily: "'Playfair Display',Georgia,serif" }} 
+            className="text-3xl font-black tracking-tight text-gray-900 select-none cursor-pointer"
+            onClick={() => onPageChange("Simuladores")}
+          >
             Invest
           </div>
           <button className="text-xs font-bold uppercase tracking-widest bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition-colors">
@@ -16,7 +25,15 @@ export function Navbar() {
         </div>
         <nav className="flex items-center overflow-x-auto py-1 gap-0" style={{ scrollbarWidth: "none" }}>
           {links.map(l => (
-            <button key={l} className="text-[11px] font-bold uppercase tracking-widest text-gray-500 hover:text-gray-900 px-3 py-2.5 whitespace-nowrap transition-colors border-b-2 border-transparent hover:border-gray-900">
+            <button 
+              key={l} 
+              onClick={() => onPageChange(l)}
+              className={`text-[11px] font-bold uppercase tracking-widest px-3 py-2.5 whitespace-nowrap transition-colors border-b-2 ${
+                currentPage === l 
+                  ? "text-gray-900 border-gray-900" 
+                  : "text-gray-500 hover:text-gray-900 border-transparent hover:border-gray-900"
+              }`}
+            >
               {l}
             </button>
           ))}
