@@ -392,17 +392,17 @@ export function Simulator() {
             </div>
 
             {/* quick facts */}
-            <div className="bg-gray-900 text-white overflow-hidden">
-              <div className="border-t-4 border-white" />
+            <div className="bg-white text-gray-900 overflow-hidden">
+              <div className="border-t-4 border-gray-900" />
               <div className="p-5">
-                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Sabia que?</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-gray-900 mb-4">Sabia que?</p>
                 <div className="space-y-4">
                   {[
                     "O FGC cobre até R$250.000 por CPF por banco — diversifique para maximizar a proteção.",
                     "Um CDB de 110% do CDI rende mais que o dobro da poupança no longo prazo.",
                     "Aportes mensais regulares podem triplicar seu patrimônio via juros compostos.",
                   ].map((f, i) => (
-                    <div key={i} className="flex gap-3 text-sm text-gray-300 leading-relaxed border-b border-gray-800 last:border-0 pb-4 last:pb-0">
+                    <div key={i} className="flex gap-3 text-sm text-gray-900 leading-relaxed border-b border-gray-800 last:border-0 pb-4 last:pb-0">
                       <span className="text-2xl font-black text-gray-700 leading-none shrink-0" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>{i + 1}</span>
                       <span style={{ fontFamily: "'Source Serif 4',Georgia,serif" }}>{f}</span>
                     </div>

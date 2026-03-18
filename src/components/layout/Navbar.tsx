@@ -17,7 +17,7 @@ export function Navbar({ currentPage, onPageChange }: NavbarProps) {
             className="text-3xl font-black tracking-tight text-gray-900 select-none cursor-pointer"
             onClick={() => onPageChange("Simuladores")}
           >
-            Invest
+            INVEST
           </div>
           <button className="text-xs font-bold uppercase tracking-widest bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded transition-colors">
             Newsletter

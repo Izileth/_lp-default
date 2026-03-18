@@ -51,36 +51,35 @@ export default function App() {
         {renderPage()}
       </main>
 
-      {/* global newsletter section (optional, but keep it in footer or separate if needed) */}
       {currentPage !== "Simuladores" && (
         <section className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12">
-           <div className="bg-indigo-600 rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="max-w-md text-center md:text-left">
-                <h3 className="text-3xl font-black mb-3" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>Fique por dentro do mercado</h3>
-                <p className="text-indigo-100 serif" style={{ fontFamily: "'Source Serif 4',Georgia,serif" }}>Receba análises exclusivas e as melhores oportunidades de investimento diretamente no seu e-mail.</p>
-              </div>
-              <div className="w-full max-w-sm">
-                {sent ? (
-                  <div className="bg-indigo-700/50 p-4 rounded-lg text-center font-bold">✓ Inscrição confirmada!</div>
-                ) : (
-                  <div className="flex gap-2">
-                    <input 
-                      type="email" 
-                      value={email} 
-                      onChange={e => setEmail(e.target.value)}
-                      placeholder="seu@email.com" 
-                      className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-indigo-300 focus:outline-none focus:border-white transition-all"
-                    />
-                    <button 
-                      onClick={() => email.includes("@") && setSent(true)}
-                      className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-black uppercase text-xs tracking-widest hover:bg-indigo-50 transition-colors"
-                    >
-                      Assinar
-                    </button>
-                  </div>
-                )}
-              </div>
-           </div>
+          <div className="bg-indigo-600 rounded-2xl p-8 text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-md text-center md:text-left">
+              <h3 className="text-3xl font-black mb-3" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>Fique por dentro do mercado</h3>
+              <p className="text-indigo-100 serif" style={{ fontFamily: "'Source Serif 4',Georgia,serif" }}>Receba análises exclusivas e as melhores oportunidades de investimento diretamente no seu e-mail.</p>
+            </div>
+            <div className="w-full max-w-sm">
+              {sent ? (
+                <div className="bg-indigo-700/50 p-4 rounded-lg text-center font-bold">✓ Inscrição confirmada!</div>
+              ) : (
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="seu@email.com"
+                    className="flex-1 bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-indigo-300 focus:outline-none focus:border-white transition-all"
+                  />
+                  <button
+                    onClick={() => email.includes("@") && setSent(true)}
+                    className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-black uppercase text-xs tracking-widest hover:bg-indigo-50 transition-colors"
+                  >
+                    Assinar
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
         </section>
       )}
 
@@ -89,7 +88,7 @@ export default function App() {
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
-              <span className="text-2xl font-black text-gray-900" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>Invest</span>
+              <span className="text-2xl font-black text-gray-900" style={{ fontFamily: "'Playfair Display',Georgia,serif" }}>INVEST</span>
               <p className="text-gray-500 mt-4 max-w-sm serif" style={{ fontFamily: "'Source Serif 4',Georgia,serif" }}>
                 O InvestSim é o seu portal de inteligência financeira, focado em trazer clareza e ferramentas práticas para o investidor brasileiro.
               </p>
@@ -117,8 +116,8 @@ export default function App() {
               Simulações com fins educativos. Não constitui recomendação de investimento. CDI: 11,25% a.a. © {new Date().getFullYear()} InvestSim. Todos os direitos reservados.
             </p>
             <div className="flex gap-4">
-               {/* Social Icons Placeholder */}
-               {[1, 2, 3].map(i => <div key={i} className="w-5 h-5 bg-gray-100 rounded-full"></div>)}
+              {/* Social Icons Placeholder */}
+              {[1, 2, 3].map(i => <div key={i} className="w-5 h-5 bg-gray-100 rounded-full"></div>)}
             </div>
           </div>
         </div>
