@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Bell, Newspaper } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { MAIN_NAV_LINKS } from "../../config/navigation";
 
 interface NavbarProps {
   currentPage: string;
@@ -9,7 +10,6 @@ interface NavbarProps {
 
 export function Navbar({ currentPage, onPageChange }: NavbarProps) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const links = ["Simuladores", "Investimentos", "Finanças", "Economia", "Tecnologia", "Carreira"];
 
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
@@ -56,7 +56,7 @@ export function Navbar({ currentPage, onPageChange }: NavbarProps) {
           </div>
 
           <nav className="hidden md:flex items-center overflow-x-auto py-1 gap-0" style={{ scrollbarWidth: "none" }}>
-            {links.map(l => (
+            {MAIN_NAV_LINKS.map(l => (
               <button 
                 key={l} 
                 onClick={() => handlePageSelect(l)}
@@ -114,7 +114,7 @@ export function Navbar({ currentPage, onPageChange }: NavbarProps) {
                 <div className="px-6 mb-8">
                   <h3 className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-4">Seções</h3>
                   <div className="flex flex-col gap-1">
-                    {links.map(l => (
+                    {MAIN_NAV_LINKS.map(l => (
                       <button
                         key={l}
                         onClick={() => handlePageSelect(l)}

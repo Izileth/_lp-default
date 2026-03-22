@@ -1,8 +1,52 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap');
 
-html, body {
+@theme {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Source Serif 4', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  background-color: #f9fafb;
+}
+
+body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  background-color: #010101;
+  min-height: 100vh;
+}
+
+.serif {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+.display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Custom Utilities from App.tsx */
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=range] {
+  accent-color: #4F46E5;
+}
+
+.tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #4F46E5;
+}
+
+.rule-thick {
+  border-top: 3px solid #111827;
+}
+
+.rule-mid {
+  border-top: 1px solid #e5e7eb;
 }
