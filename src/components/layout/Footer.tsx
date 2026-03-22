@@ -1,4 +1,3 @@
-import React from 'react';
 import { FOOTER_SECTIONS, LEGAL_LINKS } from "../../config/navigation";
 
 interface FooterProps {
